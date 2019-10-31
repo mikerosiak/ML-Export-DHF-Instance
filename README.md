@@ -1,4 +1,4 @@
-# ML-Export-Instance
+# ML-Export-DHF-Instance
 ## Generic MarkLogic Data Hub Instance Exporter
 
 This is a sample CoRB process that will export the instance sections of XML documents in a specified collection to a CSV file.  The instances must be in the standard DHF envelope pattern and must be a flat series of key/value pairs (hierarchical structures are not supported).  Headers are generated automatically from the element names in the instance.  If documents in the collection have inconsistent element names, an error is thrown.
