@@ -13,8 +13,6 @@ const json = require('/MarkLogic/json/json.xqy');
 
 var namespaces = {"es": "http://marklogic.com/entity-services", "im":"http://www.chevron.com/ads/IMPACT/" + URIS};
 
-//throw xdmp.describe(fn.head(cts.doc(fn.head(uris))));
-
 // Get a doc from the specified collection and then an array of the elements in its <instance> node
 var instance = fn.head(cts.doc(fn.head(uris))).xpath("/es:envelope/es:instance/im:" + URIS, namespaces);
 var elements = fn.head(json.transformToJsonObject(instance,json.config('full')))[URIS]._children;
